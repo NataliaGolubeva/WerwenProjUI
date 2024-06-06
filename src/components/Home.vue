@@ -24,6 +24,7 @@
       <tr>
         <th></th>
         <th>Name</th>
+        <th>StatusIndex</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -32,6 +33,7 @@
       <tr v-for="(site, index) in filteredSites" :key="site.id" class="hover:bg-slate-800 hover:cursor-pointer" @click="goToDetails(site.id)">
         <th>{{ index + 1 }}</th>
         <td>{{ site.name }}</td>
+        <td>{{ site.statusNr }}</td>
         <td>{{ site.status }}</td>
       </tr>
      

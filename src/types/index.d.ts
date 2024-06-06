@@ -6,18 +6,24 @@ declare namespace ConstractionData {
         description: string
         statusId: number
         status: string
+        statusNr: number
         employees: Employee[]
     }
     type Employee = {
         id: number
         name: string
-        roleId: number
         role: string
+        roleNr: number
     }
     type Status = {
         id: number
         statusNr: number
         statusName: string
+    }
+    type Role = {
+        id: number
+        roleId: number
+        roleName: string
     }
     type statusUpdate = {
         siteId: number

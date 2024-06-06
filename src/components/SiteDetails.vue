@@ -59,6 +59,7 @@
       <tr>
         <th></th>
         <th>Name</th>
+        <th>RoleIndex</th>
         <th>Role</th>
       </tr>
     </thead>
@@ -67,6 +68,7 @@
       <tr v-for="(employee, index) in site.employees" :key="employee.id">
         <th>{{index + 1 }}</th>
         <th>{{employee.name }}</th>
+        <td>{{employee.roleNr }}</td>
         <td>{{employee.role }}</td>
      
       </tr>
@@ -103,7 +105,7 @@
 </dialog>
 </template>
 <script setup lang="ts">
-
+// @ts-ignore
 import { useRouter, useRoute } from "vue-router"
 import {onMounted, computed, ref} from 'vue'
 import {useSitesStore} from '../stores/site-store'
